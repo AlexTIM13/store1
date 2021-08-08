@@ -5,14 +5,18 @@ export const ButtonContainer = styled.button`
   font-size: 1.4rem;  
   background: transparent;
   border: 0.1rem solid var(--ligthBlue);
-  color: var(--ligthBlue);
+  border-color: 
+  ${props => props.cart ? "var(--mainYellow)": "var(--ligthBlue)"};
+  color: 
+  ${props => props.cart ? "var(--mainYellow)" : "var(--ligthBlue)"};
   border-radius: 0.5rem;
   padding: 0.2rem 0.5 rem;
   cursor: pointer;
   margin: 0.2rem 0.5rem 0.2rem 0rem;
   transition: all 0.5s ease-in-out;
   &:hover{
-    background:var(--ligthBlue);
+    background: ${props =>
+      props.cart ?  "var(--mainYellow)" : "var(--ligthBlue)"};
     color: var(--mainBlue);
   }
   &:focus{
